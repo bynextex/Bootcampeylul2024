@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sözde Element</title>
+    <style>
+        html {
+            font-size: 24px;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        p::first-letter {
+            font-size: 300%;
+            float: left;
+            line-height: 0.75;
+            font-weight: bold;
+        }
+
+        p::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+
+        main {
+            max-width: 600px;
+            margin: 60px auto 20px;
+            background-color: #8EC5FC;
+            background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+            padding: 36px;
+            border-radius: 10px;
+            box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+            background: #fffef0;
+
+        }
+
+        @media (max-width: 750px) {
+            main {
+                margin: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sequi, suscipit quae quasi quidem, a debitis vel velit dolore, et voluptas! Repudiandae corporis, recusandae vel atque veniam dolor est dignissimos.</p>
+    <p>Corrupti consequatur nam porro dicta consectetur facere! Repudiandae illo enim modi doloribus excepturi blanditiis iusto dignissimos impedit obcaecati minus porro fuga veritatis accusamus ipsum, unde ad consequatur, consectetur molestias. Vitae.</p>
+    <p>Molestiae autem fugiat eaque, nulla laborum minima qui unde corrupti non pariatur est quas similique possimus voluptatem eum, debitis impedit officia culpa enim dolorum distinctio aperiam? Quasi tenetur odit assumenda!</p>
+    <p>Eius accusantium amet iure, nihil beatae, sapiente asperiores eum dignissimos non exercitationem laudantium numquam doloremque? Quam voluptatibus accusamus fugit sequi at. Hic eum modi omnis ab dolores nulla maxime quis.</p>
+</main>
+</body>
+</html>
