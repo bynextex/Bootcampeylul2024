@@ -27,10 +27,17 @@
             padding: .2rem .5rem;
             display: inline-block;
         }
+        .tarih {
+            font-family: Raleway, sans-serif;
+            color: black;
+            padding: .2rem .5rem;
+            display: inline-block;
+            opacity: calc(0.6);
+        }
 
         header {
             padding: 1rem;
-            margin: 1rem 0 2rem 0;
+            margin: 1rem 0 1rem 0;
             text-align: center;
 
         }
@@ -41,7 +48,7 @@
 
         main {
             display: flex;
-            max-width: 1200px;
+            max-width: 1500px;
             margin: 0 auto;
         }
 
@@ -55,11 +62,32 @@
             margin: 0 1rem;
         }
 
+        img {
+            width: 100%;
+        }
+
+        p {
+            padding-bottom: 5px;
+        }
+
         .box {
             background-color: white;
             margin-bottom: 2rem;
             min-height: 150px; /* sil */
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 0.15px 16px;
+        }
+
+        .button {
+            color: #000;
+            background-color: #fff
+            padding-bottom: 5px;
+        }
+
+        .Popular {
+            margin: 10px 0;
+            background-color: #f1f1f1;
+            color: #5c5c5c;
         }
 
         footer {
@@ -83,12 +111,24 @@
     </header>
     <main>
         <div class="col1">
-            <div class="box"></div>
+            <div class="box">
+                <img src="woods.jpg" alt="nature">
+                <h2>TITLE HEADING</h2>
+                <h3>Title description, <span class="tarih">April 7, 2014</span></h3>
+                <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                <button>READ MORE »</button>
+            </div>
             <div class="box"></div>
         </div>
         <div class="col2">
-            <div class="box"></div>
-            <div class="box"></div>
+            <div class="box">
+                <img src="avatar_g.jpg" alt="avatar">
+                <h2>My Name</h2>
+                <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+            </div>
+            <div class="box">
+                <h2 class="Popular">Popular Posts</h2>
+            </div>
             <div class="box"></div>
         </div>
     </main>
