@@ -16,122 +16,364 @@
         }
 
         body {
-            margin: 0;
-            background-color: #f1f1f1;
-            font-family: "Lato", sans-serif;
-        }
+  background-color: #fafafa;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
 
-        mark {
-            background-color: black;
-            color: white;
-            padding: .2rem .5rem;
-            display: inline-block;
-        }
-        .tarih {
-            font-family: Raleway, sans-serif;
-            color: black;
-            padding: .2rem .5rem;
-            display: inline-block;
-            opacity: calc(0.6);
-        }
+p {
+  line-height: 1.5;
+}
 
-        header {
-            padding: 1rem;
-            margin: 1rem 0 1rem 0;
-            text-align: center;
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
-        }
-        header>h1 {
-            margin-top: 0;
-            text-transform: uppercase;
-        }
+header {
+  text-align: center;
+  padding: 1.5rem 0;
+}
 
-        main {
-            display: flex;
-            max-width: 1500px;
-            margin: 0 auto;
-        }
+.header-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
 
-        .col1 {
-            flex: 2;
-            margin: 0 1rem;
-        }
+.mark-dark {
+  background-color: black;
+  color: white;
+  padding: 0 0.5rem;
+}
 
-        .col2 {
-            flex: 1;
-            margin: 0 1rem;
-        }
+main {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 2rem;
+}
 
-        img {
-            width: 100%;
-        }
+.col1 {
+  flex: 2;
+}
 
-        p {
-            padding-bottom: 5px;
-        }
+.col2 {
+  flex: 1;
+}
 
-        .box {
-            background-color: white;
-            margin-bottom: 2rem;
-            min-height: 150px; /* sil */
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            padding: 0.15px 16px;
-        }
+.box {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 2.5rem;
+}
 
-        .button {
-            color: #000;
-            background-color: #fff
-            padding-bottom: 5px;
-        }
+.box-header {
+  padding: 0.8rem 1rem;
+  background-color: #eee;
+  font-size: 1.25em;
+  font-weight: 500;
+}
 
-        .Popular {
-            margin: 10px 0;
-            background-color: #f1f1f1;
-            color: #5c5c5c;
-        }
+.box-body {
+  padding: 0.8rem 1rem;
+}
 
-        footer {
-            background-color: #616161;
-            margin-top: 1rem;
-        }
+.box-image {
+  width: 100%;
+}
 
-        @media (max-width: 500px) { /* 990 olacak */
-            main {
-                flex-direction: column;
-            }
-        }
+.box-title {
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.box-text {
+  margin: 0;
+  font-weight: 400;
+}
+
+.post {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 2.5rem;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.post-body {
+  padding: 0.8rem 1rem;
+}
+
+.post-title {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.post-desc {
+  font-size: 1.1em;
+  margin-top: 0.4rem;
+}
+
+.post-date {
+  opacity: 0.5;
+}
+
+.post-text {
+  margin: 1rem 0;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.post-footer > button {
+  border: 1px solid #ccc;
+  padding: 0.8rem 1.2rem;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.post-footer > button:hover {
+  background-color: #ccc;
+}
+
+.post-comments {
+  font-weight: 600;
+}
+
+.post-comment-count {
+  margin-left: 0.3rem;
+}
+
+.post-comment-count.nonzero {
+  border-radius: 50%;
+}
+
+.pp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pp-item {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.pp-item:hover {
+  background-color: #ddd;
+}
+
+.pp-item:last-child {
+  border-bottom: none;
+}
+
+.pp-item::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.pp-pic {
+  float: left;
+  width: 50px;
+  margin-right: 0.8rem;
+}
+
+.pp-title {
+  font-size: 1.2em;
+}
+
+.tags {
+  line-height: 2;
+}
+
+.tags > span {
+  margin-right: 0.1rem;
+}
+
+.tags > .mark-dark {
+  font-size: 1.1em;
+}
+
+.mark-light {
+  background-color: #eee;
+  color: #222;
+  padding: 0 0.5rem;
+}
+
+footer {
+  padding: 2rem 1rem;
+  background-color: #777;
+  color: white;
+}
+
+.nav-btn {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+}
+
+.nav-btn:hover {
+  background-color: #ddd;
+  color: #222;
+}
+
+.nav-btn.disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+}
+
+.copyright {
+  margin: 1rem 0;
+}
+
+/* maks genişliği 500px olan cihazlarda */
+@media (max-width: 992px) {
+  main {
+    flex-direction: column;
+    gap: 0;
+    margin: 1rem 1.5rem;
+  }
+
+  /* listedeki üçüncü öğeden sonrakileri gizle */
+  .pp-list > li:nth-child(n + 4) {
+    display: none;
+  }
+}
+
     </style>
 </head>
 <body>
     <header>
-        <h1>MY BLOG</h1>
-        <div class="site-desc">
-            Welcome to the blog of <mark>unknown</mark>
-        </div>
-    </header>
-    <main>
-        <div class="col1">
-            <div class="box">
-                <img src="woods.jpg" alt="nature">
-                <h2>TITLE HEADING</h2>
-                <h3>Title description, <span class="tarih">April 7, 2014</span></h3>
-                <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                <button>READ MORE »</button>
+        <div class="container">
+            <header>
+              <div class="header-title">
+                My Blog
+              </div>
+              <div class="header-description">
+                Welcome to the blog of <span class="mark-dark">unknown</span>
+              </div>
+            </header>
+            <main>
+              <div class="col1">
+                <div class="post">
+                  <img src="//picsum.photos/id/873/700/220" alt="mountains" class="post-image">
+                  <div class="post-body">
+                    <h2 class="post-title">Title Heading</h2>
+                    <div class="post-desc">Title description, <span class="post-date">April 7, 2014</span></div>
+                    <p class="post-text">Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed
+                      mattis
+                      nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at.
+                      Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum.
+                      Sed
+                      vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                    </p>
+                    <div class="post-footer">
+                      <button>Read More &raquo;</button>
+                      <div class="post-comments">
+                        Comments <span class="post-comment-count mark-dark">0</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="post">
+                  <img src="//picsum.photos/id/944/700/220" alt="mountains" class="post-image">
+                  <div class="post-body">
+                    <h2 class="post-title">Blog Entry</h2>
+                    <div class="post-desc">Title description, <span class="post-date">April 2, 2014</span></div>
+                    <p class="post-text">Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed
+                      mattis
+                      nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at.
+                      Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum.
+                      Sed
+                      vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                    </p>
+                    <div class="post-footer">
+                      <button>Read More &raquo;</button>
+                      <div class="post-comments">
+                        Comments <span class="post-comment-count nonzero mark-dark">2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col2">
+                <div class="box">
+                  <img class="box-image" src="//picsum.photos/id/1027/400/250" alt="profile">
+                  <div class="box-body">
+                    <h3 class="box-title">My Name</h3>
+                    <p class="box-text">Just me, myself and I, exploring the universe of uknownment. I have a heart
+                      of
+                      love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with
+                      you.</p>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="box-header">Popular Posts</div>
+                  <ul class="pp-list">
+                    <li class="pp-item">
+                      <img class="pp-pic" src="//picsum.photos/id/33/300/300" alt="pp1">
+                      <div class="pp-title">Lorem</div>
+                      <div class="pp-desc">Sed mattis nunc</div>
+                    </li>
+                    <li class="pp-item">
+                      <img class="pp-pic" src="//picsum.photos/id/55/300/300" alt="pp1">
+                      <div class="pp-title">Ipsum</div>
+                      <div class="pp-desc">Praes tinci sed</div>
+                    </li>
+                    <li class="pp-item">
+                      <img class="pp-pic" src="//picsum.photos/id/118/300/300" alt="pp1">
+                      <div class="pp-title">Dorum</div>
+                      <div class="pp-desc">Ultricies congue</div>
+                    </li>
+                    <li class="pp-item">
+                      <img class="pp-pic" src="//picsum.photos/id/248/300/300" alt="pp1">
+                      <div class="pp-title">Mingsum</div>
+                      <div class="pp-desc">Lorem ipsum dipsum</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="box">
+                  <div class="box-header">Tags</div>
+                  <div class="box-body">
+                    <div class="tags">
+                      <span class="mark-dark">Travel</span>
+                      <span class="mark-light">New York</span>
+                      <span class="mark-light">London</span>
+                      <span class="mark-light">IKEA</span>
+                      <span class="mark-light">Norway</span>
+                      <span class="mark-light">DIY</span>
+                      <span class="mark-light">Ideas</span>
+                      <span class="mark-light">Baby</span>
+                      <span class="mark-light">Family</span>
+                      <span class="mark-light">News</span>
+                      <span class="mark-light">Clothing</span>
+                      <span class="mark-light">Shopping</span>
+                      <span class="mark-light">Sports</span>
+                      <span class="mark-light">Games</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+          <footer>
+            <nav>
+              <a class="nav-btn disabled">Previous</a>
+              <a href="#" class="nav-btn">Next &raquo;</a>
+            </nav>
+            <div class="copyright">
+              Copyright &copy; 2023
             </div>
-            <div class="box"></div>
-        </div>
-        <div class="col2">
-            <div class="box">
-                <img src="avatar_g.jpg" alt="avatar">
-                <h2>My Name</h2>
-                <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
-            </div>
-            <div class="box">
-                <h2 class="Popular">Popular Posts</h2>
-            </div>
-            <div class="box"></div>
-        </div>
-    </main>
-    <footer>Sayfanın en alt kısmı (copy right. vs)</footer>
+          </footer>
 </body>
 </html>

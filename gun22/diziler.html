@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diziler</title>
+</head>
+<body>
+    <script src="../ortak/yaz.js"></script>
+
+    <script>
+        // let a = 3;
+        // let b = 4;
+        // let c = 7;
+        
+        // let toplam = a + b + c;
+        // ciz(toplam);
+        //YUKARIDAKİ YÖNTEM YERİNE AŞAĞIDAKİ UYGULANABİLİR
+
+        //                 0        1        2         3
+        let apartman = ["betül", "güneş", "metin", "burak"]
+
+        ciz("Apartmandaki Kat Sayısı: " + apartman.length);
+        ciz("dizi elemanları: " + apartman.toString());
+
+        // diziye eleman ekle
+        apartman.push("cenap");
+        ciz("cenap eklendi:<br>" + apartman);
+
+        // dizinin belirli bir sıradaki elemanına erişme
+        ciz("dizinin 3 nolu indeksindeki eleman:<br>" + apartman[3]);
+
+        // 1 indekse "mahmut" stringini koy
+        apartman[1] = "mahmut";
+        ciz("Apartman 1. indeksine mahmut taşındı: <br> " +
+            apartman
+        );
+
+        // bir dizinin başına eleman ekleme
+        apartman.unshift("altuğ");
+        ciz("dizinin başına altug eklendi:<br>" + 
+            apartman
+        );
+
+        // hem alır hem siler
+        let ilki = apartman.shift();
+        yaz("silinen: " + ilki);
+        ciz("dizinin ilk elemanını sildik:<br>" + apartman);
+
+        // pop sondakini alır ve siler
+        let sonu = apartman.pop();
+        yaz("silinen: " + sonu);
+        ciz("dizinin son elemanını sildik:<br>" + apartman);
+
+        // dizinin 2. indeksindeki bir adet elemanı sil
+        apartman.splice(2, 1, "EFE");
+        yaz("2. indeksindeki elemanı sildikten sonra:");
+        ciz(apartman);
+
+        // dizinin 2. indeksindeki bir adet eleman ekle
+        apartman.splice(2, 0, "SAZAİ");
+        yaz("2. indeksindeki 'sezai' elemanını koy:<br>");
+        ciz(apartman);
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görev 1</title>
+</head>
+<body>
+    <script src="../ortak/yaz.js"></script>
+    <ul>
+        <li>6 elemanlı bir sayı dizisi oluştur:
+            4, 8, 15, 16, 23, 42</li>
+        <li>başına 10 ekle</li>
+        <li>sonuna 99 ekle</li>
+        <li>2. indeksten başlayarak 3 adet sayı sil</li>
+        <li>3. indekse 77 sayısını sok (mevcutlara dokunma)</li>
+        <li>2. indekteki sayıyı 66 olarak güncelle</li>
+        <li>başını sil ve silineni yazdır</li>
+        <li>sonunu sil ve silineni yazdır</li>
+    </ul>
+    
+    <script>
+        // 6 elemanlı bir sayı dizisi oluştur:
+        let dizi = ["4", "8", "15", "16", "23", "42"]
+        yaz("Sayı Dizisi: " + dizi.length);
+        ciz("Dizi elemanları: " + dizi.toString());
+
+        // başına '10' ekle
+        dizi.unshift("10");
+        ciz("Başına '10' eklendi:<br>" + 
+            dizi
+        );
+
+        // sonuna '99' ekle
+        dizi.push("99");
+        yaz("Sonuna '99' eklendi:<br>");
+        ciz(dizi);
+
+        // 2. indeksten başlayarak 3 adet sayı sil
+        dizi.splice(2, 3);
+        yaz("2. indeksten başlayarak 3 adet sayı sildikten sonra:<br>");
+        ciz(dizi);
+
+        // 3. indekse 77 sayısını sok (mevcutlara dokunma)
+        dizi.splice(3, 0, 77    );
+        yaz("3. indekse 77 sayısını soktuk:<br>");
+        ciz(dizi);
+
+        // 2. indekteki sayıyı 66 olarak güncelle
+        dizi.splice(2, 1, 66);
+        yaz("2. indekteki sayıyı 66 olarak güncelledik:");
+        ciz(dizi);
+
+        // başını sil ve silineni yazdır
+        let ilki = dizi.shift();
+        yaz("silinen: " + ilki);
+        ciz("dizinin ilk elemanını sildik:<br>" + dizi);
+
+        // sonunu sil ve silineni yazdır
+        let sonu = dizi.pop();
+        yaz("silinen: " + sonu);
+        ciz("dizinin son elemanını sildik:<br>" + dizi);
+
+        // Sonraki derste neler yapacağız
+        // döngülerle dizi elemanlarına erişme(belki döngüler konusunda işlenebilir)
+        // dizi metotları
+        // dizilerle bir takım işlemler
+        // dizilerde nesne taşıma vs.
+        
+        // ödev: https://www.w3schools.com/js/js_arrays.asp konusuna göz gezdirme
+    </script>
+</body>
+</html>
