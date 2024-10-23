@@ -1,3 +1,32 @@
 <!-- GÖREV 3: Bir metin kutusu koyun. Kullanıcı oraya renk kodu girince
  sayfanın arkaplan rengi o renk olsun. Örnek inputlar:
  red, orange, #fafafa, #e3c, rgb(253, 33, 128), vs.. -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Arka Plan Rengi Değiştirme</title>
+ </head>
+ <body>
+ 
+     <h1>Arka Plan Rengini Değiştir</h1>
+     <input type="text" id="renkGirdisi" placeholder="Renk kodu girin (ör: red, #fafafa, rgb(253, 33, 128))" />
+     <button id="rengiUygula">Rengi Uygula</button>
+ 
+     <script>
+         // Rengi Uygula butonunu ve renk girişi kutusunu seç
+         const renkGirdisi = document.getElementById("renkGirdisi");
+         const rengiUygulaButon = document.getElementById("rengiUygula");
+ 
+         // Butona tıklandığında arka plan rengini değiştir
+         rengiUygulaButon.addEventListener("click", () => {
+             const renkDegeri = renkGirdisi.value;  // Kullanıcının girdiği renk kodu
+             document.body.style.backgroundColor = renkDegeri;  // Sayfanın arka plan rengini değiştir
+         });
+     </script>
+ 
+ </body>
+ </html>
+ 

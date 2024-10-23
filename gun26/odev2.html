@@ -1,1 +1,43 @@
 <!-- ÖDEV 2: Bir kare yapın. Bu kareye tıklayınca sayfa üzerinde rasgele bir yere gitsin. (İpuçları: JavaScript Css teki mutlak pozisynlarından yararlanılabilir.) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastgele Kare Hareketi</title>
+    <style>
+        /* Kare stili */
+        #kare {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="kare"></div>
+
+    <script>
+        // Kare elementini seç
+        const kare = document.getElementById("kare");
+
+        // Kareye tıklanınca çalışacak fonksiyon
+        kare.addEventListener("click", () => {
+            // Sayfa genişliği ve yüksekliği kadar rastgele bir pozisyon hesapla
+            const randomX = Math.floor(Math.random() * (window.innerWidth - kare.offsetWidth));
+            const randomY = Math.floor(Math.random() * (window.innerHeight - kare.offsetHeight));
+
+            // Kareyi rastgele pozisyona taşı
+            kare.style.left = `${randomX}px`;
+            kare.style.top = `${randomY}px`;
+        });
+    </script>
+
+</body>
+</html>
