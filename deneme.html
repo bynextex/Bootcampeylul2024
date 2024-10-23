@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deneme</title>
+    <style>
+        #kare {
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Arkaplan Renk Değiştirme</h1>
+    <input type="text" id="renkGirin" placeholder="Renk adı veya kodu girin..." />
+    <button id="renkUygula">Rengi Uygula</button>
+
+    <script>
+        const renkGirin = document.getElementById("renkGirin");
+        const renkUygulaButon = document.getElementById("renkUygula");
+        
+        renkUygulaButon.addEventListener("click", () => {
+            const renkDegeri = renkGirin.value;
+            document.body.style.backgroundColor = renkDegeri;
+        });
+    </script>
+</body>
+</html>
